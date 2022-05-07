@@ -53,7 +53,7 @@ def isSentenceValid(s):
     sentence must be more than 1 word and must not only include proper nouns or capitalized words
     """
     words = s.split()
-    if len(words) > 1:
+    if len(words) > 1 and len(words) < 50:
         for i in range(1, len(words)):
             if words[i][0].islower():
                 return True
@@ -143,7 +143,7 @@ def writeCSV():
 
 def main():
     print("hello world")
-    # writeCSV()
+    writeCSV()
 
     # # bikol
     # file_bikol_lit = open("Bikol_Literary_Text.txt", encoding='utf-8')
